@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://www.spicejet.com/"/>
+  <listeners>
+    <listener class-name="utility.Listner"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.TC001_Positive_SignUp_Test">
+        <methods>
+          <include name="setup"/>
+          <include name="signUpTest" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+        </methods>
+      </class> <!-- test.TC001_Positive_SignUp_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
