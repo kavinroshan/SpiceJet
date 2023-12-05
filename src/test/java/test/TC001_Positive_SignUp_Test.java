@@ -30,6 +30,7 @@ public class TC001_Positive_SignUp_Test extends ProjectSpec {
 		.Email(email)
 		.Password(password)
 		.Confirm_Password(confirmPass)
+		//.TermsAndCond()
 		.Submit();
 }
 }

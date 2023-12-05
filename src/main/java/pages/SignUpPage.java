@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -148,14 +149,24 @@ public class SignUpPage  extends ProjectSpec{
 	}
 
 	public SignUpPage Email(String mail) {
+		try {
+			sendKeys(email, mail);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
-		sendKeys(email, mail);
 		return this;
 	}
 
 	public SignUpPage Password(String pass) {
+		try {
+			sendKeys(password, pass);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
-		sendKeys(password, pass);
 		return this;
 	}
 	
@@ -166,25 +177,24 @@ public class SignUpPage  extends ProjectSpec{
 	}
 
 	public SignUpPage TermsAndCond() {
-		Actions action = new Actions(driver);
-		action.moveToElement(checkbox).click(checkbox).perform();
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+		
 		//click(checkbox);
 		return this;
 	}
 
-	public SignUpPage Submit() {
-		try {
-			Actions act = new Actions(driver);
-			act.moveToElement(submitbutton).click(submitbutton).perform();
-			//click(submitbutton);
-			System.out.println("SIGNUP SUCCESS");
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+	
+	
+	public SignUpPage Submit() throws InterruptedException {
+	
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", submitbutton);
 		
-		return this;
-	}
+		System.out.println("SIGNUP SUCCESS");
+		
+	
+	return this;
+}
+	
 	
 	//validation for negtive testcases
 	
