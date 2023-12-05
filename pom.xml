@@ -94,7 +94,7 @@
                             <suiteXmlFile>Positive_LogIntestng.xml</suiteXmlFile>
                             <suiteXmlFile>Negative_LogIntestng.xml</suiteXmlFile>
                             <suiteXmlFile>Positive_OneWaytestng.xml</suiteXmlFile>
-							<suiteXmlFile>Positive_RoundWaytestng..xml</suiteXmlFile>
+							<suiteXmlFile>Positive_RoundWaytestng.xml</suiteXmlFile>
                             <suiteXmlFile>HomePage_Functionalitiestestng.xml</suiteXmlFile>
 							
 						</suiteXmlFiles>
