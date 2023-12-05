@@ -29,6 +29,6 @@ public class ProjectSpec extends UtilityClass {
 	
 	@AfterMethod
 	public void closeBrowser() {
-		//close();
+		close();
 	}
 }
